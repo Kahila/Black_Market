@@ -1,11 +1,20 @@
-<!DOCTYPE html>
-<html>
 
+<?php
+    require_once 'core/init.php';
+
+    if (Session::exists('home')){
+        echo '<p>'.Session::flash('home').'</p>';
+    }
+    $user = new User();//current user
+    if ($user->isLoggedIn()){
+        echo "logged in, Welcome";
+    }
+?>
+
+<html>
     <head>
         <link rel="stylesheet" type="text/css" href="css/index.css">
-
     </head>
-
     <body class>
         <div class="nav">
             <a href="login.php">Login/Register</a>
