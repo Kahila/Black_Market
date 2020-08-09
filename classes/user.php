@@ -44,18 +44,6 @@ class User{
 		}
 	}
 
-	public function upload_image($fields = array()){
-		if (!$this->_db->insert('images', $fields)){
-			throw new Exception('failed to upload image.');
-		}
-	}
-
-	public function upload_comment($fields = array()){
-		if (!$this->_db->insert('comments', $fields)){
-			throw new Exception('failed to comment.');
-		}
-	}
-
 	public function logout(){
 		$this->_db->delete('users_session', array('user_id', '=', $this->data()->id));
 		Session::delete($this->_sessionName);

@@ -1,5 +1,7 @@
 <!-- php code for the login will be going bellow -->
 <?php
+    require_once 'core/init.php';
+
     
 ?>
 

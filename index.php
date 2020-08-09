@@ -8,7 +8,7 @@
     $user = new User();//current user
     if ($user->isLoggedIn()){
         echo "logged in, Welcome";
-    }
+    }else{
 ?>
 
 <html>
@@ -23,3 +23,7 @@
         </div>
     </body>
 </html>
+
+<?php 
+    }
+?>

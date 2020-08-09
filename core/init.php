@@ -8,8 +8,8 @@ $GLOBALS['config'] = array(
     'mysql' => array(
         'host' => 'localhost',
         'username' => 'root',
-        'password' => '123456',
-        'db' => 'camagru'
+        'password' => 'root',
+        'db' => 'market'
         //'port' => '8080'
     ),
     'remember' => array(
