@@ -1,4 +1,32 @@
-<!DOCTYPE html>
+<?php
+    require 'core/init.php';
+
+    $user = new User();
+    $conn = new PDO("mysql:host=localhost;dbname=market", "root", "root");
+    $code = input::get('code');
+    
+    if (Session::exists('home')){
+        echo '<p>'.Session::flash('home').'</p>';
+        echo "in here";
+    }else{
+        echo 'no session';
+    }
+    
+    if (isset($_POST['submit'])){
+        $query = "SELECT * FROM market.users WHERE confirmed='$code'";
+        $stmt = $conn->prepare($query);
+        $stmt->execute();
+        $res = array_reverse($stmt->fetchAll());
+        if ($res){
+            $query = "UPDATE `users` SET `confirmed` = '0' WHERE `users`.`confirmed` = '$code'";
+            $stmt = $conn->prepare($query);
+            $stmt->execute();
+            header("location: index.php");
+        }
+    }
+?>
+
+<DOCTYPE html>
 <html>
 
     <head>
@@ -12,7 +40,7 @@
 
     <body>
         
-        <form action="/login.php" method="POST">
+        <form action="" method="POST">
         <div class="login-box">
 
         <!-- login or register nav bar -->
@@ -25,10 +53,10 @@
             <h1>Verify</h1>
             <div class="textbox">
                 <i class="fa fa-user-plus" aria-hidden="true"></i>
-                <input type="text" placeholder="verification code" name="" value="">
+                <input type="text" placeholder="verification code" name="code" value="">
             </div>
 
-            <input type="submit" class="btn" name="" value="Enter">
+            <input type="submit" class="btn" name="submit" value="Enter">
         </div>
             </div>
         </form>

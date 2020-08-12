@@ -25,15 +25,15 @@
             <h1>Login</h1>
             <div class="textbox">
                 <i class="fa fa-at" aria-hidden="true"></i>
-                <input type="text" placeholder="Email" name="" value="">
+                <input type="email" placeholder="Email" name="email" value="">
             </div>
 
             <div class="textbox">
                 <i class="fa fa-key" aria-hidden="true"></i>
-                <input type="password" placeholder="password" name="" value="">
+                <input type="password" placeholder="password" name="password" value="">
             </div>
 
-            <input type="submit" class="btn" name="" value="Enter">
+            <input type="submit" class="btn" name="submit" value="Enter">
         </div>
             </div>
         </form>
