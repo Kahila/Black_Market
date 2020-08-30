@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel='stylesheet' href='/stylesheets/login.css' />
+        <title>registration</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="css/estilo.css">
+    </head>
+
+    <body>
+        
+        <form action="" class="register" method="POST">
+            <div class="login-box">
+
+            <!-- login or register nav bar -->
+            <div class="nav">
+                <a href="#" style="float: left;">Verify</a>
+                <a href="login" >  Login </a>
+                <a href="/" > Home   </a>
+                <!-- <a href="index.php" class="active" style="float: left;">Register</a> -->
+            </div>
+
+                <h1>Register</h1>
+
+                <div class="textbox">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <input type="text" placeholder="username" name="username" autocomplete="off" value=""  required>
+                </div>
+
+                <div class="textbox">
+                    <i class="fa fa-at" aria-hidden="true"></i>
+                    <input type="email" placeholder="email" name="email" value="" required>
+                </div>
+
+                <div class="textbox">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <input type="password" placeholder="password" name="password" value="" required>
+                </div>
+
+                <div class="textbox">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <input type="password" placeholder="comfirm password" name="password2" value="" required>
+                </div>
+                <input type="hidden" name="token" value="">
+                <input type="submit" class="btn" name="Register" value="Enter" required>
+            </div>
+                </div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel='stylesheet' href='/stylesheets/login.css' />
+        <title>Formulário de login HTML/CSS</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="css/estilo.css">
+    </head>
+
+    <body>
+        
+        <form action="" method="POST">
+        <div class="login-box">
+
+        <!-- login or register nav bar -->
+        <div class="nav">
+            <a href="register" > Register  </a>
+            <a href="/" tyle="float: right;"> Home</a>
+            <a href="#" style="float: left;">Verify</a>
+        </div>
+
+            <h1>Login</h1>
+            <div class="textbox">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <input type="text" placeholder="username" name="username" value="" required autocomplete="off">
+            </div>
+
+            <div class="textbox">
+                <i class="fa fa-key" aria-hidden="true"></i>
+                <input type="password" placeholder="password" name="password" value="" required autocomplete="off">
+            </div>
+            <input type="hidden" name="token" value="<?php echo token::generate(); ?>">
+            <input type="submit" class="btn" name="submit" value="Enter">
+        </div>
+            </div>
+        </form>
+    </body>
+</html>
