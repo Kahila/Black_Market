@@ -34,7 +34,7 @@ connection.connect(function(err) {
         });
 
         //creating the users table
-        var userTable = "CREATE TABLE market.users (email VARCHAR(100) PRIMARY KEY, username VARCHAR(30), password VARCHAR(1000), account_verified VARCHAR(10))";
+        var userTable = "CREATE TABLE market.users (email VARCHAR(100) PRIMARY KEY, username VARCHAR(30), password VARCHAR(1000), account_verified VARCHAR(7))";
         connection.query(userTable, function(err, result){
             if (err){
                 console.log("Error creating users table");

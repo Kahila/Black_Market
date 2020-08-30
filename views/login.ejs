@@ -12,7 +12,7 @@
 
     <body>
         
-        <form action="" method="POST">
+        <form action="/login/login" method="POST">
         <div class="login-box">
 
         <!-- login or register nav bar -->
@@ -25,14 +25,14 @@
             <h1>Login</h1>
             <div class="textbox">
                 <i class="fa fa-user" aria-hidden="true"></i>
-                <input type="text" placeholder="username" name="username" value="" required autocomplete="off">
+                <input type="email" placeholder="email" name="email" value="" required autocomplete="off">
             </div>
 
             <div class="textbox">
                 <i class="fa fa-key" aria-hidden="true"></i>
                 <input type="password" placeholder="password" name="password" value="" required autocomplete="off">
             </div>
-            <input type="hidden" name="token" value="<?php echo token::generate(); ?>">
+            <input type="hidden" name="token" value="">
             <input type="submit" class="btn" name="submit" value="Enter">
         </div>
             </div>
