@@ -1,11 +1,57 @@
 @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 
+
+.square_box{
+    position: absolute;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(54deg);
+    border-top-left-radius: 45px;
+    opacity: 0.302;
+  }
+  
+  .square_box.box_three {
+    background-image: -moz-linear-gradient(-90deg, #290a59 0%, #3d57f4 100%);
+    background-image: -webkit-linear-gradient(-90deg, #290a59 0%, #3d57f4 100%);
+    background-image: -ms-linear-gradient(-90deg, #290a59 0%, #3d57f4 100%);
+    opacity: 0.059;
+    left: -80px;
+    top: -60px;
+    width: 500px;
+    height: 500px;
+    border-radius: 45px;
+  }
+  
+  .square_box.box_four {
+    background-image: -moz-linear-gradient(-90deg, #290a59 0%, #3d57f4 100%);
+    background-image: -webkit-linear-gradient(-90deg, #290a59 0%, #3d57f4 100%);
+    background-image: -ms-linear-gradient(-90deg, #290a59 0%, #3d57f4 100%);
+    opacity: 0.059;
+    left: 150px;
+    top: -25px;
+    width: 550px;
+    height: 550px;
+    border-radius: 45px;
+  }
+  
+  .square_box.box_five {
+    background-image: -moz-linear-gradient(-90deg, #290a59 0%, #3d57f4 100%);
+    background-image: -webkit-linear-gradient(-90deg, #290a59 0%, #3d57f4 100%);
+    background-image: -ms-linear-gradient(-90deg, #290a59 0%, #3d57f4 100%);
+    opacity: 0.059;
+    left: 250px;
+    top: -15px;
+    width: 600px;
+    height: 600px;
+    border-radius: 45px;
+  }
+
 body {
 
     padding: 0;
     font-family: sans-serif;
     background: url(../img/img.jpg) no-repeat;
-    background-color: #333;
+    background: #000e29;
     background-size: cover;
 }
 
@@ -13,10 +59,11 @@ body {
     background-color: rgb(32, 35, 36);
     overflow: hidden;
     border-radius: 20px;
+    opacity: 0.302;
 }
 
 .nav a{
-    color: white;
+    color: #fff;
     float: right;
     padding: 15px 17px;
     text-align: center;
@@ -27,7 +74,7 @@ body {
 }
 
 .nav a:hover{
-    background-color: black;
+    background-color: #000e29;
     color: white;
 }
 

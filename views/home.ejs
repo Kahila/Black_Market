@@ -1,19 +1,112 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/stylesheets/home.css">
+        <link rel="stylesheet" href="/stylesheets/products.css">
+        <link rel="stylesheet" href="/stylesheets/cards.css">
+        <link rel="stylesheet" href="/stylesheets/notify.css">
+        <link rel="stylesheet" href="/stylesheets/search.css">
     </head>
     <body>
-        <div class="bookshelf_wrapper">
-            <ul class="books_list">
-              <li class="book_item first"></li>
-              <li class="book_item second"></li>
-              <li class="book_item third"></li>
-              <li class="book_item fourth"></li>
-              <li class="book_item fifth"></li>
-              <li class="book_item sixth"></li>
-            </ul>
-            <div class="shelf"></div>
+      <div class="square_box box_three"></div>
+      <div class="square_box box_four"></div>
+      <div class="square_box box_five"></div>
+    <div>
+      <form action="/home/home" method="post">
+        <header class="headerr">
+          <div class="wrap">
+            <div class="search">
+              <input type="text" class="searchTerm" placeholder="Search For Book Here">
+              <button type="submit" class="searchButton">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
           </div>
+        </header>
+      </form>
+      <div class="sidebar-container">
+        <div class="sidebar-logo">
+          <img src="/images/logo.png" alt="logo" style="height: 150px;margin-left: 4px;">
+          <!-- <b style="margin-left: 30px;">BiblioLib</b>  -->
+        </div>
+        <ul class="sidebar-navigation">
+          <li class="header">Shope</li>
+          <li>
+            <a href="/home">
+              <i class="fa fa-book" aria-hidden="true" ></i> Books <b style="float:right"><%= length%></b>
+              <i class="count" style="float: right;"></i>
+            </a>
+          </li>
+          <li>
+            <a href="/cart">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart <b style="float:right"><%= len1%></b>
+            </a>
+          </li>
+          <!-- <li>
+            <a href="/checkout">
+              <i class="fa fa-credit-card" aria-hidden="true"></i> Checkout
+            </a>
+          </li> -->
+          <li class="header">Account</li>
+          <!-- <li>
+            <a href="#">
+              <i class="fa fa-comment" aria-hidden="true"></i> Chats
+            </a>
+          </li> -->
+          <li>
+            <a href="/settings">
+              <i class="fa fa-cogs" aria-hidden="true"></i> Settings
+            </a>
+          </li>
+          <li>
+            <a href="/upload">
+              <i class="fa fa-upload" aria-hidden="true"></i> Upload
+            </a>
+          </li>
+          <li>
+            <a href="/history">
+              <i class="fa fa-clock-o" aria-hidden="true"></i> Receipts
+            </a>
+          </li>
+          <li>
+            <a href="/logout/logout" name='logout'>
+              <i class="fa fa-sign-out" aria-hidden="true"></i> sign out
+            </a>
+          </li>
+        </ul>
+     
+      </div>
+      <!-- account verification -->
+      <script>
+        if ('<%= verified%>' == "false")
+          document.write("<a href='/verify'><div class=\"container\">" +
+          "<div class=\"rectangle\">" + 
+            "<div class=\"notification-text\" >" +
+              "<i class=\"fa fa-info-circle\" ></i>" +
+              "<span>&nbsp;&nbsp; click to verify account</span>" +
+            "</div>" +
+          "</div>" +
+        "</div></a>");
+      </script>
+
+      <% for (var item in products){ %>
+        <div class="product-card">
+          <div class="product-tumb">
+            <img src="<%= pImage[item]%>" alt="">
+          </div>
+          <div class="product-details">
+            <h><a href=""><%= products[item].charAt(0).toUpperCase() + products[item].slice(1)%></a></h>
+            <div class="product-bottom-details">
+              <div class="product-price">R <%= Pprice[item]%></div>
+              <div class="product-links">
+                <a href="http://localhost:3000/add/add?name=<%=products[item]%>"><i class="fa fa-shopping-cart"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% } %>
+      <div>
+      <!-- </div> -->
     </body>
 </html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/stylesheets/checkout.css">
+        <link rel="stylesheet" href="/stylesheets/home.css">
+        <link rel="stylesheet" href="/stylesheets/recept2.css">
+        <link rel="stylesheet" href="/stylesheets/history.css">
+    </head>
+
+    <body>
+        <div class="square_box box_three"></div>
+        <div class="square_box box_four"></div>
+        <div class="square_box box_five"></div>
+<div class="sidebar-container">
+    <div class="sidebar-logo">
+        <img src="/images/logo.png" alt="logo" style="height: 150px;margin-left: 4px;">
+        <!-- <b style="margin-left: 30px;">BiblioLib</b>  -->
+      </div>
+    <ul class="sidebar-navigation">
+        <li class="header">Shope</li>
+        <li>
+        <a href="/home">
+            <i class="fa fa-book" aria-hidden="true" ></i> Books
+        </a>
+        </li>
+        <li>
+        <a href="/cart">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart
+        </a>
+        </li>
+        <!-- <li>
+        <a href="/checkout">
+            <i class="fa fa-credit-card" aria-hidden="true"></i> Checkout
+        </a>
+        </li> -->
+        <li class="header">Account</li>
+        <!-- <li>
+        <a href="#">
+            <i class="fa fa-comment" aria-hidden="true"></i> Chats
+        </a>
+        </li> -->
+        <li>
+        <a href="/settings">
+            <i class="fa fa-cogs" aria-hidden="true"></i> Settings
+        </a>
+        </li>
+        <li>
+        <a href="/upload">
+            <i class="fa fa-upload" aria-hidden="true"></i> Upload
+        </a>
+        </li>
+        <li>
+        <a href="/history">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>Receipts
+        </a>
+        </li>
+        <li>
+        <a href="/logout/logout">
+            <i class="fa fa-sign-out" aria-hidden="true"></i> sign out
+        </a>
+        </li>
+    </ul>
+    </div> 
+
+    <% for (var item in prod){ %>
+        <div style="text-align: center;border-color: solid #0652DD; border-style: solid; top: 30px; margin-right: 30px; margin-bottom: 20px;">
+            <h2 style=""><%= Date[item] %></h2>
+            <p class="tooltip--bottom" data-tooltip="Hello World!">products</p>
+            <p class="tooltip--bottom" data-tooltip="Hello World!"><%= prod[item] %></p>
+          </div>
+    <% } %>
+    </body>
+</html>

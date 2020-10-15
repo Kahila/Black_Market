@@ -1,0 +1,147 @@
+#app {
+    width: 760px;
+    margin: 20px auto;
+  }
+  #app #product .box {
+    width: 230px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+  }
+  #app #product .box img {
+    width: 230px;
+  }
+  #app #product .box i {
+    width: 50px;
+    height: 50px;
+    background: #ED277F;
+    color: #ffffff;
+    border-radius: 25px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.4rem;
+    position: absolute;
+    right: 20px;
+    top: 150px;
+    box-shadow: 0 0 4px 2px rgba(80, 80, 80, 0.1);
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  #app #product .box i:hover {
+    transform: scale(1.05);
+  }
+  #app #product .box h2 {
+    margin-left: 20px;
+  }
+  #app #product .box p {
+    margin-left: 20px;
+  }
+  #app #cart {
+    margin-top: 50px;
+    overflow: hidden;
+  }
+  #app #cart #head {
+    width: 100%;
+    border-bottom: 1px solid white;
+    height: 40px;
+    display: block;
+  }
+  #app #cart #head h3 {
+    display: inline-block;
+    line-height: 40px;
+    margin: 0;
+  }
+  #app #cart #head #price {
+    display: inline-block;
+    color: white;
+    margin-left: 200px;
+    line-height: 40px;
+  }
+  #app #cart #head #quantity {
+    display: inline-block;
+    color: white;
+    margin-left: 100px;
+    line-height: 40px;
+  }
+  #app #cart #head #total {
+    float: right;
+    display: inline-block;
+    color: white;
+    line-height: 40px;
+  }
+  #app #cart .row {
+    width: 100%;
+    border-bottom: 1px solid white;
+    overflow: hidden;
+    padding: 10px 0;
+    display: block;
+    float: left;
+  }
+  #app #cart .row img {
+    height: 100px;
+    float: left;
+  }
+  #app #cart .row h4 {
+    float: left;
+    margin: 0;
+    line-height: 100px;
+    margin-left: 20px;
+    width: 100px;
+  }
+  #app #cart .row p {
+    float: left;
+    margin: 0;
+    width: 80px;
+    line-height: 100px;
+    margin-left: 35px;
+    text-align: center;
+  }
+  #app #cart .row .qty-minus {
+    float: left;
+    width: 20px;
+    line-height: 100px;
+    margin-left: 60px;
+    text-align: center;
+    cursor: pointer;
+  }
+  #app #cart .row .qty {
+    float: left;
+    width: 20px;
+    line-height: 100px;
+    margin-left: 20px;
+    text-align: center;
+  }
+  #app #cart .row .qty-plus {
+    float: left;
+    width: 20px;
+    line-height: 100px;
+    margin-left: 20px;
+    text-align: center;
+    cursor: pointer;
+  }
+  #app #cart .row .del {
+    float: left;
+    width: 80px;
+    line-height: 100px;
+    margin-left: 60px;
+    cursor: pointer;
+    text-decoration: underline;
+    color: #ED277F;
+  }
+  #app #cart .row .totalprice {
+    float: left;
+    width: 80px;
+    line-height: 100px;
+    margin-left: 10px;
+    text-align: right;
+  }
+  #app #cart .row .row p::before, #app #cart .row .box p::before, #app #cart .row .totalprice::before {
+    content: "$";
+  }
+  #app #cart h5 {
+    font-size: 1.2rem;
+    text-align: right;
+  }
+  

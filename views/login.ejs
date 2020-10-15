@@ -4,7 +4,9 @@
     <head>
         <link rel='stylesheet' href='/stylesheets/style.css' />
         <link rel='stylesheet' href='/stylesheets/login.css' />
-        <title>Formulário de login HTML/CSS</title>
+        <link rel="stylesheet" href="/stylesheets/social.css">
+        <link rel="stylesheet" href="/stylesheets/notify.css">
+        <title>login</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="css/estilo.css">
@@ -12,30 +14,67 @@
 
     <body>
         
+        
+        <script>
+            if ('<%= inv%>' == "true")
+            document.write("<div class=\"container\">" +
+                "<div class=\"rectangle\">" + 
+                    "<div class=\"notification-text\" >" +
+                        "<i class=\"fa fa-info-circle\" ></i>" +
+                        "<span>&nbsp;&nbsp; Invalid username or password</span>" +
+                        "</div>" +
+                        "</div>" +
+                        "</div>");
+        </script>
+
+        <div class="square_box box_three"></div>
+        <div class="square_box box_four"></div>
+        <div class="square_box box_five"></div>
+
         <form action="/login/login" method="POST">
         <div class="login-box">
 
         <!-- login or register nav bar -->
         <div class="nav">
-            <a href="register" > Register  </a>
             <a href="/" tyle="float: right;"> Home</a>
-            <a href="#" style="float: left;">Verify</a>
+            <a href="register" style="float: left;"> Register  </a>
+            <!-- <a href="#" style="float: left;">Verify</a> -->
         </div>
 
             <h1>Login</h1>
-            <div class="textbox">
+            <div class="textbox" id="email">
                 <i class="fa fa-user" aria-hidden="true"></i>
                 <input type="email" placeholder="email" name="email" value="" required autocomplete="off">
             </div>
 
-            <div class="textbox">
+            <div class="textbox" id="pass">
                 <i class="fa fa-key" aria-hidden="true"></i>
-                <input type="password" placeholder="password" name="password" value="" required autocomplete="off">
+                <input type="password" placeholder="password"  name="password" value="" required autocomplete="off">
             </div>
             <input type="hidden" name="token" value="">
             <input type="submit" class="btn" name="submit" value="Enter">
+            
+            <!-- <%= inv%> -->
+            <!-- <div class="effect aeneas">
+                <div class="buttons">
+                  <a href="#" class="fb" title="login using Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                  <a href="#" class="tw" title="login using Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                  <a href="#" class="g-plus" title="login using Gmail"><i class="fa fa-google" aria-hidden="true"></i></a>
+                  <a href="#" class="insta" title="login using Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                  <a href="#" class="in" title="login using Linked In"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                </div>
+              </div> -->
         </div>
             </div>
         </form>
+        <script>
+                // document.write('<%= inv%>');
+                if ('<%= inv%>' == 'true')
+                {
+                    document.getElementById('pass').style = "border-bottom: 1px solid #ff6b6b;";
+                    document.getElementById('email').style = "border-bottom: 1px solid #ff6b6b;";
+                    // alert ("invalid username or password");
+                }
+        </script>
     </body>
 </html>

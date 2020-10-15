@@ -1,0 +1,282 @@
+.rec{
+    margin-top: 0;
+    padding-top: 0%;
+}
+
+#invoice-POS {
+    box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
+    padding: 3mm;
+    /* margin: 0 auto; */
+    position: relative;
+    margin-right: 20px;
+    margin-right: 40px;
+    top: 30px;
+    left: 370px;
+    width: 30%;
+    /* height: 70%; */
+    border: 1px solid;
+    background: #0652DD;
+    /* float: right; */
+    border-radius: 20px;
+}
+/* #invoice-POS ::selection {
+    background: #f31544;
+    color: #fff;
+}
+#invoice-POS ::moz-selection {
+    background: #f31544;
+    color: #fff;
+} */
+#invoice-POS h1 {
+    font-size: 1.5em;
+    color: #222;
+}
+#invoice-POS h2 {
+    font-size: 1.5em;
+}
+#invoice-POS h3 {
+    font-size: 1.5em;
+    font-weight: 300;
+    line-height: 2em;
+}
+#invoice-POS p {
+    font-size: 0.9em;
+    color: black;
+    line-height: 1.2em;
+}
+#invoice-POS #top, #invoice-POS #mid, #invoice-POS #bot {
+
+    border-bottom: 1px solid #eee;
+}
+#invoice-POS #top {
+    min-height: 100px;
+}
+#invoice-POS #mid {
+    min-height: 80px;
+}
+#invoice-POS #bot {
+    min-height: 50px;
+}
+#invoice-POS #top .logo {
+    height: 60px;
+    width: 60px;
+    background: url(/images/logo.png) no-repeat;
+    background-size: 60px 60px;
+}
+#invoice-POS .clientlogo {
+    float: left;
+    height: 60px;
+    width: 60px;
+    background-size: 60px 60px;
+    border-radius: 50px;
+}
+#invoice-POS .info {
+    display: block;
+    margin-left: 0;
+}
+#invoice-POS .title {
+    float: right;
+}
+#invoice-POS .title p {
+    text-align: right;
+}
+#invoice-POS table {
+    width: 100%;
+    border-collapse: collapse;
+}
+#invoice-POS .tabletitle {
+    font-size: 0.5em;
+    background: #0652DD;
+}
+#invoice-POS .service {
+    border-bottom: 1px solid #0652DD;
+}
+#invoice-POS .item {
+    width: 24mm;
+}
+#invoice-POS .itemtext {
+    font-size: 0.5em;
+}
+#invoice-POS #legalcopy {
+    margin-top: 5mm;
+}
+
+
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* The actual popup */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #4cd137;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+  }
+  
+/* css for the popup */
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #4cd137 transparent transparent transparent;
+  }
+  
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+  
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+
+  /* button */
+  /* html, body {
+    height: 100%;
+    width: 100%;
+    background: #ecf0f1;
+    overflow-x: hidden;
+} */
+* {
+    box-sizing: border-box;
+}
+h1, h2, p {
+    font-family: Roboto, sans-serif;
+    color: #0652DD;
+}
+h1 {
+    margin-top: 50px;
+    font-size: 26px;
+    background: white;
+    color: #efefef;
+    padding: 40px 0 40px 20%;
+    margin-bottom: 50px;
+}
+
+h2 {
+    color: #0652DD;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+p {
+    display: inline;
+    margin-right: 50px;
+}
+[class^="tooltip"] {
+    position: relative;
+}
+[class^="tooltip"]:after {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    content: attr(data-tooltip);
+    padding: 6px 10px;
+    top: 1.4em;
+    left: 50%;
+    transform: translateX(-50%) translateY(-2px);
+    background: grey;
+    color: white;
+    white-space: nowrap;
+    z-index: 2;
+    border-radius: 2px;
+    transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+}
+[class^="tooltip"]:hover:after {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+.tooltip--left:after {
+    top: -4px;
+    left: 0;
+    transform: translateX(-112%) translateY(0);
+}
+.tooltip--left:hover:after {
+    transform: translateX(-110%) translateY(0);
+}
+.tooltip--right:after {
+    top: -4px;
+    left: 100%;
+    transform: translateX(12%) translateY(0);
+}
+.tooltip--right:hover:after {
+    transform: translateX(10%) translateY(0);
+}
+.tooltip--triangle:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: solid 5px transparent;
+    border-right: solid 5px transparent;
+    border-bottom: solid 5px grey;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    transform: translateX(-50%) translateY(-2px);
+    top: 1.1em;
+    left: 50%;
+    transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+    z-index: 3;
+}
+.tooltip--triangle:hover:before {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+.follow {
+    width: 42px;
+    height: 42px;
+    border-radius: 50px;
+    background: #03a9f4;
+    display: inline-block;
+    margin: 50px calc(50% - 19px);
+    white-space: nowrap;
+    padding: 13px;
+    box-sizing: border-box;
+    color: #efefef;
+    transition: all 0.2s ease;
+    font-family: Roboto, sans-serif;
+    text-decoration: none;
+    box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.2);
+}
+.follow i {
+    margin-right: 20px;
+    transition: margin-right 0.2s ease;
+    color: white;
+}
+.follow:hover {
+    width: 134px;
+    transform: translateX(-50px);
+}
+.follow:hover i {
+    margin-right: 10px;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/stylesheets/home.css">
+        <link rel="stylesheet" href="/stylesheets/products.css">
+        <link rel="stylesheet" href="/stylesheets/cards.css">
+        <link rel="stylesheet" href="/stylesheets/notify.css">
+    </head>
+    <body>
+      <div class="square_box box_three"></div>
+      <div class="square_box box_four"></div>
+      <div class="square_box box_five"></div>
+    <div>
+
+      <div class="sidebar-container">
+        <div class="sidebar-logo">
+          <img src="/images/logo.png" alt="logo" style="height: 150px;margin-left: 4px;">
+          <!-- <b style="margin-left: 30px;">BiblioLib</b>  -->
+        </div>
+        <ul class="sidebar-navigation">
+          <li class="header">MANAGE</li>
+          <li>
+            <a href="/adminBooks">
+              <i class="fa fa-book" aria-hidden="true" ></i> Books
+            </a>
+          </li>
+          <li>
+            <a href="/users">
+              <i class="fa fa-users" aria-hidden="true"></i> Users
+            </a>
+          </li>
+          <!-- <li>
+            <a href="#">
+              <i class="fa fa-credit-card" aria-hidden="true"></i> Checkout
+            </a>
+          </li> -->
+          <li class="header">New</li>
+          <!-- <li>
+            <a href="#">
+              <i class="fa fa-comment" aria-hidden="true"></i> Chats
+            </a>
+          </li> -->
+          <li>
+            <a href="/uploads">
+              <i class="fa fa-upload" aria-hidden="true"></i> Uploads
+            </a>
+          </li>
+          <!-- <li>
+            <a href="/upload">
+              <i class="fa fa-check" aria-hidden="true"></i> Checkouts
+            </a>
+          </li> -->
+          <!-- <li>
+            <a href="/history">
+              <i class="fa fa-clock-o" aria-hidden="true"></i> Receipts
+            </a>
+          </li> -->
+          <li>
+            <a href="/logout/logout">
+              <i class="fa fa-sign-out" aria-hidden="true"></i> sign out
+            </a>
+          </li>
+        </ul>
+      </div> 
+    </div>
+
+    <% for (var item in products){ %>
+        <div class="product-card">
+          <div class="product-tumb">
+            <img src="<%= pImage[item]%>" alt="">
+          </div>
+          <div class="product-details">
+            <h><a href=""><%= products[item].charAt(0).toUpperCase() + products[item].slice(1)%></a></h>
+            <div class="product-bottom-details">
+              <div class="product-price">R <%= Pprice[item]%></div>
+              <div class="product-links">
+                <a href="http://localhost:3000/remove/remove?name=<%=products[item]%>"><i class="fa fa-times" style="color: red;"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% } %>
+    </body>
+</html>

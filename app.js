@@ -13,7 +13,19 @@ var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login');
 var registerRouter = require('./routes/register');
 var homeRouter = require('./routes/home');
-
+var settingsRouter = require('./routes/settings');
+var checkoutRouter = require('./routes/checkout');
+var cartRouter = require('./routes/cart');
+var logoutRouter = require('./routes/logout');
+var verifyRouter = require('./routes/verify');
+var addRouter = require('./routes/add');
+var adminRouter = require('./routes/admin');
+var removeRouter = require('./routes/remove');
+var historyRouter = require('./routes/history');
+var uploadRouter = require('./routes/upload');
+var adminBooksRouter = require('./routes/adminBooks');
+var uploadsRouter = require('./routes/uploads');
+var userRemoveRouter = require('./routes/userRemove');
 var app = express();
 
 // view engine setup
@@ -48,7 +60,19 @@ app.use('/users', usersRouter);
 app.use('/login', loginRouter);
 app.use('/register', registerRouter);
 app.use('/home', homeRouter);
-
+app.use('/settings', settingsRouter);
+app.use('/checkout',checkoutRouter);
+app.use('/cart', cartRouter);
+app.use('/logout', logoutRouter);
+app.use('/verify', verifyRouter);
+app.use('/add', addRouter);
+app.use('/admin', adminRouter);
+app.use('/remove', removeRouter);
+app.use('/history', historyRouter);
+app.use('/upload', uploadRouter);
+app.use('/adminBooks', adminBooksRouter);
+app.use('/uploads', uploadsRouter);
+app.use('/userRemove', userRemoveRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

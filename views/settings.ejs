@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel='stylesheet' href='/stylesheets/settings.css' />
+        <link rel="stylesheet" href="/stylesheets/home.css">
+    </head>
+    <body>
+      <div class="square_box box_three"></div>
+      <div class="square_box box_four"></div>
+      <div class="square_box box_five"></div>
+    <div>
+
+      <div class="sidebar-container">
+        <div class="sidebar-logo">
+          <img src="/images/logo.png" alt="logo" style="height: 150px;margin-left: 4px;">
+          <!-- <b style="margin-left: 30px;">BiblioLib</b>  -->
+        </div>
+        <ul class="sidebar-navigation">
+          <li class="header">Shope</li>
+          <li>
+            <a href="/home">
+              <i class="fa fa-book" aria-hidden="true" ></i> Books
+            </a>
+          </li>
+          <li>
+            <a href="/cart">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart
+            </a>
+          </li>
+          <!-- <li>
+            <a href="#">
+              <i class="fa fa-credit-card" aria-hidden="true"></i> Checkout
+            </a>
+          </li> -->
+          <li class="header">Account</li>
+          <!-- <li>
+            <a href="#">
+              <i class="fa fa-comment" aria-hidden="true"></i> Chats
+            </a>
+          </li> -->
+          <li>
+            <a href="/settings">
+              <i class="fa fa-cogs" aria-hidden="true"></i> Settings
+            </a>
+          </li>
+          <li>
+            <a href="/upload">
+              <i class="fa fa-upload" aria-hidden="true"></i> Upload
+            </a>
+          </li>
+          <li>
+            <a href="/history">
+              <i class="fa fa-clock-o" aria-hidden="true"></i> Receipts
+            </a>
+          </li>
+          <li>
+            <a href="/logout/logout">
+              <i class="fa fa-sign-out" aria-hidden="true"></i> sign out
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <form action="/settings/settings" class="settings" method="post">
+        <div class="login-box">
+
+            <h1>Settings</h1>
+            <div class="textbox">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <input type="text" placeholder="username" name="username" autocomplete="off" value="<%=username%>"  required>
+            </div>
+
+            <!-- <div class="textbox">
+                <i class="fa fa-at" aria-hidden="true"></i>
+                <input type="email" placeholder="email" name="email" value="<%=email%>"  required>
+            </div> -->
+
+            <div class="textbox">
+                <i class="fa fa-key" aria-hidden="true"></i>
+                <input type="password" placeholder="old password" name="password" value="" required>
+            </div>
+
+            <div class="textbox">
+                <i class="fa fa-key" aria-hidden="true"></i>
+                <input type="password" placeholder="new password" name="password1" value="" >
+            </div>
+
+            <div class="textbox">
+                <i class="fa fa-key" aria-hidden="true"></i>
+                <input type="password" placeholder="comfirm new password" name="password2" value="">
+            </div>
+            <input type="hidden" name="token" value="">
+            <!-- <a href="/logout/logout"> -->
+              <input  type="submit" class="btn" name="Register" value="Enter" required>
+            <!-- </a> -->
+        </div>
+            </div>
+    </form>
+    </div>
+
+
+    </body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel='stylesheet' href='/stylesheets/settings.css' />
+        <link rel="stylesheet" href="/stylesheets/home.css">
+        <link rel="stylesheet" href="/stylesheets/notify.css">
+    </head>
+    <body>
+      <div class="square_box box_three"></div>
+      <div class="square_box box_four"></div>
+      <div class="square_box box_five"></div>
+    <div>
+
+      <div class="sidebar-container">
+        <div class="sidebar-logo">
+          <img src="/images/logo.png" alt="logo" style="height: 150px;margin-left: 4px;">
+          <!-- <b style="margin-left: 30px;">BiblioLib</b>  -->
+        </div>
+        <ul class="sidebar-navigation">
+          <li class="header">Shope</li>
+          <li>
+            <a href="/home">
+              <i class="fa fa-book" aria-hidden="true" ></i> Books
+            </a>
+          </li>
+          <li>
+            <a href="/cart">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart
+            </a>
+          </li>
+          <!-- <li>
+            <a href="#">
+              <i class="fa fa-credit-card" aria-hidden="true"></i> Checkout
+            </a>
+          </li> -->
+          <li class="header">Account</li>
+          <!-- <li>
+            <a href="#">
+              <i class="fa fa-comment" aria-hidden="true"></i> Chats
+            </a>
+          </li> -->
+          <li>
+            <a href="/settings">
+              <i class="fa fa-cogs" aria-hidden="true"></i> Settings
+            </a>
+          </li>
+          <li>
+            <a href="/upload">
+              <i class="fa fa-upload" aria-hidden="true"></i> Upload
+            </a>
+          </li>
+          <li>
+            <a href="/history">
+              <i class="fa fa-clock-o" aria-hidden="true"></i> Receipts
+            </a>
+          </li>
+          <li>
+            <a href="/logout/logout">
+              <i class="fa fa-sign-out" aria-hidden="true"></i> sign out
+            </a>
+          </li>
+        </ul>
+      </div>
+      <script>
+        if ('<%= submitted%>' == "1"){
+            
+            document.write("<a href='#' style='text-decoration: none; green'><div class=\"container\">" +
+            "<div class=\"rectangle\" style='background: #4cd137;'>" + 
+              "<div class=\"notification-text\" >" +
+                "<i class=\"fa fa-info-circle\" ></i>" +
+                "<span>&nbsp;&nbsp; You Upload has been sent to Admin</span>" +
+              "</div>" +
+            "</div>" +
+          "</div></a>");
+        }else if ('<%= submitted%>' == "-1"){
+            document.write("<a href='#' style='text-decoration: none; green'><div class=\"container\">" +
+            "<div class=\"rectangle\" style='background: #e84118;'>" + 
+              "<div class=\"notification-text\" >" +
+                "<i class=\"fa fa-info-circle\" ></i>" +
+                "<span>&nbsp;&nbsp; Please Input Valid Information</span>" +
+              "</div>" +
+            "</div>" +
+          "</div></a>");
+        }
+      </script>
+      <form action="/upload/upload" enctype="multipart/form-data" class="settings" method="post">
+        <div class="login-box">
+
+            <!-- <h1>Settings</h1> -->
+            <div class="textbox">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <input type="text" placeholder="Product Name" name="name" autocomplete="off" value=""  required>
+            </div>
+
+            <div class="textbox">
+                <i class="fa fa-money" aria-hidden="true">R</i>
+                <input type="text" placeholder="Price" pattern="[0-9]*" name="price" value="" required>
+            </div>
+
+            <div class="textbox">
+                <i class="fa fa-image" aria-hidden="true"></i>
+                <input type="file" placeholder="Image" accept="image/*" name="photo" value="" required>
+            </div>
+
+            <input type="hidden" name="token" value="">
+              <input  type="submit" class="btn" name="Register" value="Enter" required>
+        </div>
+            </div>
+    </form>
+    </div>
+       
+    </body>
+</html>

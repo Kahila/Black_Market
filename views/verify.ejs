@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel='stylesheet' href='/stylesheets/login.css' />
+        <link rel="stylesheet" href="/stylesheets/social.css">
+        <title>verify</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="css/estilo.css">
+    </head>
+
+    <body>
+        <div class="square_box box_three"></div>
+        <div class="square_box box_four"></div>
+        <div class="square_box box_five"></div>
+
+        <!-- verification form -->
+        <form action="/verify/verify" method="POST">
+            <div class="login-box">
+                <div class="nav">
+                    <a href="/home" tyle="float: right;"> Home</a>
+                    <a href="logout/logout" style="float: left;"> Logout  </a>
+                </div>
+                    <h1>Verify</h1>
+                    <div class="textbox">
+                        <i class="fa fa-key" aria-hidden="true"></i>
+                        <input type="text" placeholder="verification code" name="verify" value="" required autocomplete="off">
+                    </div>
+                    <input type="submit" class="btn" name="submit" value="Enter">
+                </div>
+            </div>
+        </form>
+    </body>
+</html>

@@ -1,3 +1,24 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+
+<html>
+    <head>
+        <link rel='stylesheet' href='/stylesheets/error.css' />
+        <link rel="stylesheet" href="/stylesheets/home.css">
+    </head>
+    <body>
+        <div class="square_box box_three"></div>
+        <div class="square_box box_four"></div>
+        <div class="square_box box_five"></div>
+
+        <h1><%= message %></h1>
+        <h2><%= error.status %></h2>
+        <pre><%= error.stack %></pre>
+        <div id="main">
+            <div class="fof">
+                    <h1>Error 404</h1>
+            </div>
+    </div>
+    <!-- <h1><%= message %></h1>
+    <h2><%= error.status %></h2>
+    <pre><%= error.stack %></pre> -->
+    </body>
+</html>

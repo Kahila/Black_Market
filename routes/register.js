@@ -21,7 +21,7 @@ router.use(body_parser.urlencoded({extended: true}));
 
 
 //getting user input from the frontend
-router.post('/register', function(req, result, next){
+router.post('/register', function(req, res, next){
   var fail = false;
 
   if (pass.exec(!req.body.password)){
@@ -48,16 +48,16 @@ router.post('/register', function(req, result, next){
           service: 'gmail',
           // port: 2525,
           auth:{
-            user: 'matcha7121@gmail.com',
-            pass: '7121997zeus4#'
+            user: 'email address here',
+            pass: 'email password here'
           }
         });
   
         var mailOptions = {
-          from: "matcha7121@gmail.com",
+          from: "email address here",
           to: email,
           subject: 'Account verification',
-          text: 'Hello '+ username+'\n\nthank you for registering to Bibliotheca,\nin order to login please verify account\n\nyour verification code is: '+ code
+          text: 'Hello '+ username+'\n\nthank you for registering to Bibliotheca'
         };
 
         // res.send("hello can you see me");
@@ -73,10 +73,11 @@ router.post('/register', function(req, result, next){
         console.log(pass);
         // mail = req.body.email.toLowerCase;
         console.log(email);
-        var insert = "INSERT INTO market.users (email, username, password, account_verified) VALUES ('"+ email +"','"+ username +"', '"+ pass +"', '"+ code +"')";
+        var insert = "INSERT INTO market.users (email, username, password, account_verified) VALUES ('"+ email +"','"+ username +"', '"+ pass +"', '"+ code +"')";//remember to add code
         con.query(insert, function(err, result){
           if (err) throw err;
           console.log("user has been added to the database");
+          res.redirect("/login");
         });
       }
     })

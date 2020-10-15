@@ -46,7 +46,7 @@ connection.connect(function(err) {
         });
 
         //creating the product table
-        var productTable = "CREATE TABLE market.products (user_email VARCHAR(100), product_name VARCHAR(100), product_price INT, product_description VARCHAR(200), product_image1 VARCHAR(100), product_image2 VARCHAR(100), product_image3 VARCHAR(100))";
+        var productTable = "CREATE TABLE market.products (user_email VARCHAR(100), product_name VARCHAR(100), product_price INT, product_image1 VARCHAR(2000))";
         connection.query(productTable, function(err, result){
             if (err){
                 console.log("Error creating products table");
@@ -54,6 +54,18 @@ connection.connect(function(err) {
             }
             else{
                  console.log("Success: products Table Created");
+            }
+        });
+
+        //creating the cart table
+        var productTable = "CREATE TABLE market.cart (user_email VARCHAR(100), product_name VARCHAR(100), product_price INT, product_image1 VARCHAR(2000))";
+        connection.query(productTable, function(err, result){
+            if (err){
+                console.log("Error creating cart table");
+                return;
+            }
+            else{
+                 console.log("Success: products cart Created");
             }
         });
     });
