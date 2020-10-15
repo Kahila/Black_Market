@@ -28,4 +28,12 @@ on-campus second hand book purchases by: being a central hub for used
 textbooks, providing a reliable and convenient bookstore service and
 allowing students an official channel for transactions
 
+#### Stack 
+* Node js Express
+* mySQL
+
+#### Images
+###### Login
+![login_page](https://drive.google.com/file/d/1FkAc0IEN-tw5lOj1opsBjoMJmBDZETuz/view?usp=sharing)
+
 
