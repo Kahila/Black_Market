@@ -35,5 +35,11 @@ allowing students an official channel for transactions
 #### Images
 ###### Login
 ![login_page](https://github.com/Kahila/Black_Market/blob/master/images/login.png)
+###### Register
+![register_page](https://github.com/Kahila/Black_Market/blob/master/images/register.png)
+###### Products
+![products_page](https://github.com/Kahila/Black_Market/blob/master/images/products.png)
+###### Checkout
+![checkout_page](https://github.com/Kahila/Black_Market/blob/master/images/check_out.png)
 
 
