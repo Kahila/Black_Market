@@ -40,9 +40,7 @@ body {
   width: 100%;
   list-style: none;
 }
-.navigation ul li:hover {
-  background: #ea1d63;
-}
+
 .navigation ul li a {
   position: relative;
   display: block;
@@ -85,9 +83,6 @@ body {
     top: 0;
     left:0;
   }
-}
-.toggle.active {
-  background: #ea1d63;
 }
 
 .toggle:before {

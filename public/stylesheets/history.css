@@ -7,13 +7,8 @@
   }
   
   body {
-    /* font-size: 14px;
-    display: flex;
-    justify-content: center; */
-    /* margin-top: 0; */
     align-items: center;
     height: 100vh;
-    /* background: linear-gradient(to bottom right, #114357 60%, #f29492); */
     line-height: 1.6;
   }
   

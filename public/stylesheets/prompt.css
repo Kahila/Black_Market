@@ -34,15 +34,11 @@
     font-size: 20px;
   }
   
-  /*Resize the wrap to see the search bar change!*/
   .wrap{
     width: 650px;
     position: relative;
-    /* top: 50%; */
     margin-top: 25px;
     margin-left: 450px;
     float: right;
-    /* left: 1000%; */
-    /* padding-bottom: 20px; */
     transform: translate(-50%, -50%);
   }
